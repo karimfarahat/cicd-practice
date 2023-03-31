@@ -32,6 +32,10 @@ jobs:
           command: |
             apk add --update ansible
       - run:
+          name: List loaded SSH keys
+          command: |
+            ssh-add -l
+      - run:
           name: Configure server
           command: |
             ansible-playbook -i inventory.txt playbook.yml
