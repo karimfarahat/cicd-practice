@@ -31,7 +31,7 @@ jobs:
           name: Install dependencies
           command: |
             apk add --update ansible; \
-            apk add openssh-client
+            apk add --no-cache openssh-client
       - run:
           name: List loaded SSH keys
           command: |
