@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            ansible-playbook -i inventory.txt playbook.yml -vv
+            ansible-playbook -i inventory.txt playbook.yml
 
 # Sequential workflow
 workflows:
