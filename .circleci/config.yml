@@ -33,10 +33,6 @@ jobs:
             apk add --update ansible; \
             apk add --no-cache openssh-client
       - run:
-          name: List loaded SSH keys
-          command: |
-            ssh-add -l
-      - run:
           name: Configure server
           command: |
             ansible-playbook -i inventory.txt playbook.yml
